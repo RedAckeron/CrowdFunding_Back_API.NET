@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Step]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	IdProject INT NOT NULL,
+	Amount INT,
+	Reward VARCHAR(100),
+
+	FOREIGN KEY(IdProject) REFERENCES [Project](Id)
+)

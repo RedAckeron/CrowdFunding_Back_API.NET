@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CrowdFundingDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{1c81771e-ee70-456f-8027-d1036d3f50f6}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CrowdFundingDB</RootNamespace>
+    <AssemblyName>CrowdFundingDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="StoredProcedure" />
+    <Folder Include="Triggers" />
+    <Folder Include="Views" />
+    <Folder Include="StoredProcedure\User" />
+    <Folder Include="Views\User" />
+    <Folder Include="StoredProcedure\Step" />
+    <Folder Include="StoredProcedure\Project_Contributor" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\User.sql" />
+    <Build Include="Tables\Project.sql" />
+    <Build Include="Tables\Project_Contributor.sql" />
+    <Build Include="Tables\Role.sql" />
+    <Build Include="Tables\Step.sql" />
+    <Build Include="Tables\User_Role.sql" />
+    <Build Include="StoredProcedure\User\GetUser.sql" />
+    <Build Include="StoredProcedure\User\Login.sql" />
+    <Build Include="StoredProcedure\User\Role_User.sql" />
+    <Build Include="StoredProcedure\User\RegisterUser.sql" />
+    <Build Include="StoredProcedure\User\UserRoleRegister.sql" />
+    <Build Include="Views\User\V_Users.sql" />
+    <Build Include="StoredProcedure\User\UpdateUser.sql" />
+    <None Include="StoredProcedure\User\UserRoleRemoveOwner.sql" />
+    <Build Include="Tables\Step_User.sql" />
+    <Build Include="StoredProcedure\Step\CreateStep.sql" />
+    <Build Include="StoredProcedure\Step\GetAll.sql" />
+    <Build Include="StoredProcedure\Step\GetOne.sql" />
+    <Build Include="StoredProcedure\Project_Contributor\GetSumOnProjectByUser.sql" />
+    <Build Include="StoredProcedure\Step\GetStepsByProject.sql" />
+    <Build Include="StoredProcedure\Step\GetStepsUserByProjectAndUser.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CrowdFundingDB.publish.xml" />
+    <None Include="StoredProcedure\User\UserRoleAddOwner.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[User]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	NickName VARCHAR(50) NOT NULL,
+	Email VARCHAR(100) NOT NULL,
+	Password VARCHAR(100) NOT NULL,
+	BirthDate DATE NOT NULL,
+	Salt VARCHAR(100) NOT NULL,
+
+	CONSTRAINT check_date_of_birth CHECK (YEAR(BirthDate) <= YEAR(GETDATE()) - 18 )
+)
+

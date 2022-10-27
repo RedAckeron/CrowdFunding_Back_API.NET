@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrowdFundingAPI", "CrowdFundingAPI\CrowdFundingAPI.csproj", "{320AF43F-D07C-40D5-8EA3-0E5AC85A2BF7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7B16029-3D98-4EC2-80CA-B5E79D31905B} = {D7B16029-3D98-4EC2-80CA-B5E79D31905B}
+		{631DA37A-527A-4587-A7C5-7C80682367F8} = {631DA37A-527A-4587-A7C5-7C80682367F8}
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CrowdFundingDB", "CrowdFundingDB\CrowdFundingDB.sqlproj", "{1C81771E-EE70-456F-8027-D1036D3F50F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{D7B16029-3D98-4EC2-80CA-B5E79D31905B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{631DA37A-527A-4587-A7C5-7C80682367F8} = {631DA37A-527A-4587-A7C5-7C80682367F8}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{631DA37A-527A-4587-A7C5-7C80682367F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox", "ToolBox\ToolBox.csproj", "{98A96D92-6DEC-4238-A6F0-74CACC0E1726}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{320AF43F-D07C-40D5-8EA3-0E5AC85A2BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320AF43F-D07C-40D5-8EA3-0E5AC85A2BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320AF43F-D07C-40D5-8EA3-0E5AC85A2BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320AF43F-D07C-40D5-8EA3-0E5AC85A2BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C81771E-EE70-456F-8027-D1036D3F50F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C81771E-EE70-456F-8027-D1036D3F50F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C81771E-EE70-456F-8027-D1036D3F50F6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1C81771E-EE70-456F-8027-D1036D3F50F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C81771E-EE70-456F-8027-D1036D3F50F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C81771E-EE70-456F-8027-D1036D3F50F6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D7B16029-3D98-4EC2-80CA-B5E79D31905B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B16029-3D98-4EC2-80CA-B5E79D31905B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B16029-3D98-4EC2-80CA-B5E79D31905B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B16029-3D98-4EC2-80CA-B5E79D31905B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{631DA37A-527A-4587-A7C5-7C80682367F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{631DA37A-527A-4587-A7C5-7C80682367F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{631DA37A-527A-4587-A7C5-7C80682367F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{631DA37A-527A-4587-A7C5-7C80682367F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A96D92-6DEC-4238-A6F0-74CACC0E1726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A96D92-6DEC-4238-A6F0-74CACC0E1726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A96D92-6DEC-4238-A6F0-74CACC0E1726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A96D92-6DEC-4238-A6F0-74CACC0E1726}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D47DC52E-4C64-45DD-8FB1-07DF5E7692AF}
+	EndGlobalSection
+EndGlobal
